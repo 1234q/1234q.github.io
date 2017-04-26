@@ -35,6 +35,58 @@
   <li><a href="css.html">CSS</a></li>
 
 </ul>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCGjV_3-lkjnhYpwWKdNhU2U-Z6EA3tAs0",
+    authDomain: "data-base-d4da5.firebaseapp.com",
+    databaseURL: "https://data-base-d4da5.firebaseio.com",
+    projectId: "data-base-d4da5",
+    storageBucket: "data-base-d4da5.appspot.com",
+    messagingSenderId: "273567282883"
+  };
+  firebase.initializeApp(config);
+</script>
+<br>
+ Надпись
+ 
+<select id="to1">
+<option></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+ </select>
+  <br>
+<p id="value1">1</p>
+<p id="value2">2</p>
+<p id="value3">3</p>
+<script>
+
+</script>
+<script>
+function er1 (){
+
+var yourSelect = document.getElementById( "to1" );
+e= yourSelect.options[ yourSelect.selectedIndex ].value;
+var a = firebase.database().ref('/guys');
+a.on('value', function(snapshot) {
+var snap = snapshot.val();
+var g 
+g= snap[e];
+  	document.getElementById("value1").innerHTML = g.name;
+  	document.getElementById("value2").innerHTML = g.Birthdate;
+  	document.getElementById("value3").innerHTML = g.mail;
+});
+}
+</script>
+<br>
+<br>
+<a href="#on" class="button15" onclick="er1()" >PushMe</a>
+<br>
+<br>
+</body>
+</html>
 
 </body>
 </html>
