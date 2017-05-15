@@ -137,6 +137,63 @@ ID/Поле
   </body>
 
 </html>
+	
+	 </script>
+    <script>
+      function er6 (){
+        
+var k= document.getElementById("name").value;
+er2 ();
+var e = document.getElementById("i0").value;
+var a = firebase.database().ref('/guys');
+a.on('value', function(snapshot) {
+var snap = snapshot.val();
+var g 
+for (var j = 1;j<=e*3;){
+for (var ij = 1;ij<=e;){
+g= snap[ij];
+ij++;
+if (g.name == k) {
+l='i'+j;
+document.getElementById(l).innerHTML = g.name;
+l='i'+(j+1);
+document.getElementById(l).innerHTML = g.birthday;
+l='i'+(j+2);
+document.getElementById(l).innerHTML = g.mail+"<br>";
+}
+j=j+3;
+
+}}});
+}
+</script>
+    <br />
+
+
+Введите количество учетных записей
+        <input value="3" id="i0" type="text" />
+    <br />
+    <p0 id="p0"></p0>
+    <a href="#on" class="button15" onclick="er3()">Вывести</a>
+    <br />
+    <br />
+
+
+ID/Поле
+        <input type="text" class="form-control" id="path" placeholder="" value="guys/4/name" />
+
+
+Значение поля
+        <input type="text" class="form-control" id="value" placeholder="" value="alice" />
+    <br />
+    <br />
+    <a href="#on" class="button15" onclick="er4()">Добавить </a> 
+    <br />
+        <input value="Bart" id="name" type="text" />
+            <a href="#on" class="button15" onclick="er6()">Вывести по имени </a>  
+  </body>
+
+</html>
+
 
 
 
