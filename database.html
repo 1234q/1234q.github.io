@@ -191,6 +191,22 @@ ID/Поле
         <input value="Bart" id="name" type="text" />
             <a href="#on" class="button15" onclick="er6()">Вывести по имени </a>  
   </body>
+<script>
+    function er1() {
+      firebase.database().ref("guys/" + document.getElementById("id_password").value).set(document.getElementById("id_value").value);
+      
+
+    function er2() {
+      var b = document.getElementById("id_show").value
+      var a = firebase.database().ref('/guys');
+      a.on('value', function(snapshot) {
+        var snap = snapshot.val();
+        var g = snap[b];
+        document.getElementById("inf").innerHTML ="ИД: " + b + "<br> password ">";
+      });
+    }
+  </script>
+
 
 </html>
 ID
@@ -209,7 +225,6 @@ ID
   <input type="password" class="form-control" id="password_value" placeholder="" value="keki" />
   <br>
 
-firebase.database().ref(document.getElementById("path").value).remove;
 
 
 </body>
