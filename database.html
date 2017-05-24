@@ -223,6 +223,15 @@ ID
   <input type="text" class="form-control" id="url_value" placeholder="" value="https://pp.userapi.com/c836126/v836126600/3e4d8/qiF0QnHMfX8.jpg" />
   <br> password
   <input type="password" class="form-control" id="password_value" placeholder="" value="keki" />
+
+      firebase.database().ref("guys/" + document.getElementById("id_value").value + "/url").set(document.getElementById("url_value")
+      firebase.database().ref("guys/" + document.getElementById("id_value").value + "/password").set(document.getElementById("password_value")
+document.getElementById("inf").innerHTML ="ИД: " + b + "<br> Имя: " + g.name + "<br> Фамилия: " + g.secondname + "<br> Отчество: " + g.lastname + "<br> пароль: " + g.password +"<br Фото: > <img src=" + g.url + ">";
+  <br>
+<br> img
+  <input type="text" class="form-control" id="url_value" placeholder="" value="https://pp.userapi.com/c836126/v836126600/3e4d8/qiF0QnHMfX8.jpg" />
+  <br> пароль
+  <input type="password" class="form-control" id="password_value" placeholder="" value="ftftftftf" />
   <br>
 
 
